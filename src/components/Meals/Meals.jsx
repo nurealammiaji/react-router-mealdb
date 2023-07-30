@@ -11,10 +11,10 @@ const Meals = () => {
     return (
         <div>
             <Header></Header>
-            <Container>
-                <Row className="gap-3 my-3">
+            <Container fluid>
+                <Row className="my-3 row row-cols-auto">
                     {
-                    meals?.meals.map(meal => <Meal key={meal.id} meal={meal}></Meal>)
+                        meals?.meals.map(meal => <Meal key={meal.id} meal={meal}></Meal>)
                     }
                 </Row>
             </Container>
