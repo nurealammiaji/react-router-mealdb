@@ -1,10 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
+  Link,
   RouterProvider,
 } from "react-router-dom";
 import Meals from './components/Meals/Meals.jsx';
@@ -14,11 +15,11 @@ import MealDetails from './components/MealDetails/MealDetails.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App></App>
+    element: <div><App></App><br /><br /><h3>Welcome to MealDB</h3><br /><br /><p>Find delicious meals <Link to='/meals'>here</Link></p></div>
   },
   {
     path: 'about',
-    element: <Header></Header>
+    element: <div><Header></Header><br /><br /><h3>About Us</h3></div>
   },
   {
     path: 'meals',
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
   },
   {
     path: 'contact',
-    element: <Header></Header>
+    element: <div><Header></Header><br /><br /><h3>Contact Us</h3></div>
+  },
+  {
+    path: '*',
+    element: <h1>Sorry! Not Found</h1>
   }
 ])
 

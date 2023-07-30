@@ -7,15 +7,15 @@ const MealDetails = () => {
     console.log(mealDetails);
 
     return (
-        <div>
+        <div className="border border-primary rounded p-2">
             <div>
-                <img src={strMealThumb} alt="" />
+                <img className="w-25" src={strMealThumb} alt="" />
             </div>
             <h3 className="my-3">{strMeal}</h3>
             <p>ID: {idMeal}</p>
             <p>Area: {strArea}</p>
             <p>Category: {strCategory}</p>
-            <p>Instructions: {strInstructions}</p>
+            <p>{strInstructions}</p>
         </div>
     );
 };
