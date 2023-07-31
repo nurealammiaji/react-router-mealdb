@@ -7,9 +7,9 @@ const MealDetails = () => {
     console.log(mealDetails);
 
     return (
-        <div className="border border-primary rounded p-2">
+        <div className="border border-primary rounded p-2 w-100">
             <div>
-                <img className="w-25" src={strMealThumb} alt="" />
+                <img className="w-100 rounded" src={strMealThumb} alt="" />
             </div>
             <h3 className="my-3">{strMeal}</h3>
             <p>ID: {idMeal}</p>
